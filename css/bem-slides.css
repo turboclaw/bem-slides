@@ -2,3 +2,9 @@
 	background: url(../img/karate-explosion.gif) no-repeat 50% 50%;
 	background-size: cover;
 }
+.slide--no-bem {
+	background: url(../img/what_.gif) no-repeat 50% 50%;
+	background-size: cover;
+	color: #fff;
+	font-size: 2em;
+}
