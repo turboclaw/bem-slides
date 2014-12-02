@@ -8,3 +8,8 @@
 	color: #fff;
 	font-size: 2em;
 }
+.slide--under-arrest {
+	background: url(../img/aAGS6u5.jpg) no-repeat 50% 50%;
+	background-size: cover;
+	color: #fff;
+}

@@ -1,0 +1,4 @@
+{
+    "proxy":"https://proxy.us.dominos.com:8080",
+    "https-proxy":"https://proxy.us.dominos.com:8080"
+}
