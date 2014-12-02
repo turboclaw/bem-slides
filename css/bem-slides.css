@@ -13,3 +13,13 @@
 	background-size: cover;
 	color: #fff;
 }
+.slide--roundhouse {
+	background: url(../img/roundhouse.gif) no-repeat 50% 50%;
+	background-size: cover;
+	color: #fff;
+}
+.slide--crotch {
+	background: url(../img/crotch.gif) no-repeat 50% 50%;
+	background-size: cover;
+	color: #fff;
+}

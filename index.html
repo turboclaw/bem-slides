@@ -79,7 +79,7 @@
 	</div></section>
 
 	<section class="slide slide--no-bem"><div>
-		<h2>wait, BEM</h2>
+		<h2>wait, BEM and CSS</h2>
 	</div></section>
 
 	<section class="slide"><div>
@@ -88,6 +88,8 @@
 			<li class="next">.person</li>
 			<li class="next">.person__hand</li>
 			<li class="next">.person--pierre</li>
+			<li class="next">.person--pierre .person__hand</li>
+			<li class="next">.person--pierre .person__hand .person__hand--left</li>
 		</ul>
 	</div></section>
 
@@ -106,6 +108,17 @@
 	</div></section>
 
 	<section class="slide"><div>
+		<h2>specifically targeted vs decendent selectors</h2>
+		<ul>
+			<li>portability, predictability</li>
+			<li>i want to select .developer--julian, not the third developer from the window at the closest table to the women's bathroom</li>
+			<li class="next strike">.card--overlay > div h3</li>
+			<li class="next">.card--overlay .card__title</li>
+			<li class="next">.card--some-unique-overlay__title</li>
+		</ul>
+	</div></section>
+
+	<section class="slide"><div>
 		<h2>not everything needs to be BEM-ized</h2>
 		<p>just because something happens to live inside a block it doesn’t always mean is is actually a BEM element</p>
 	</div></section>
@@ -114,8 +127,52 @@
 		<img src="img/specialty-pizzas.png" alt="specialty" />
 	</div></section>
 
+	<section class="slide slide--roundhouse"><div>
+		<h2>file organization</h2>
+	</div></section>
+
 	<section class="slide"><div>
-		<h2>CSS conventions</h2>
+		<h2>base, layout, modules, utilities, states</h2>
+		<ul>
+			<li><em>base.css</em>: setting heading sizes, default link styles, default font styles, body backgrounds</li>
+			<li>no classes, just element selectors</li>
+		</ul>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>base, layout, modules, utilities, states</h2>
+		<ul>
+			<li><em>layout.css</em>: grid styles, page container styles</li>
+		</ul>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>base, layout, modules, utilities, states</h2>
+		<ul>
+			<li><em>m.[module-name].css</em>: styles for specific components</li>
+			<li>both reusable and unique</li>
+		</ul>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>base, layout, modules, utilities, states</h2>
+		<ul>
+			<li><em>utility.css</em>: helper classes</li>
+		</ul>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>base, layout, modules, utilities, states</h2>
+		<ul>
+			<li><em>states.css</em>: errors, notifications, toggles</li>
+		</ul>
+	</div></section>
+
+	<section class="slide slide--crotch"><div>
+		<h2>style conventions</h2>
+	</div></section>
+
+	<section class="slide"><div>
 		<p>an agreed format ensures CSS that is easy to scan, easy to read and edit, easy to clearly comment, simplifies VCS merging, and results in useful diffs and version history</p>
 	</div></section>
 
@@ -123,17 +180,6 @@
 		<h2>no IDs</h2>
 		<p class="strike">#orderHistory</p>
 		<p>.order-history</p>
-	</div></section>
-
-	<section class="slide"><div>
-		<h2>specifically targeted vs decendent selectors</h2>
-		<ul>
-			<li>portability, predictability</li>
-			<li>i want to select .developer--julian, not the third developer from the window at the closest table to the women's bathroom</li>
-			<li class="next strike">.card--overlay > div > h3</li>
-			<li class="next">.card--overlay .card__title</li>
-			<li class="next">.card--some-unique-overlay__title</li>
-		</ul>
 	</div></section>
 
 	<section class="slide"><div>
@@ -164,7 +210,7 @@
 		</ul>
 	</div></section>
 
-	<section class="slide cover slide--under-arrest"><div>
+	<section class="slide slide--under-arrest"><div>
 		<p>https://github.com/turboclaw/bem-slides</p>
 	</div></section>
 	
