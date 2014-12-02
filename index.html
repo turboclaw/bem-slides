@@ -4,73 +4,8 @@
 <head>
 	<title>CSS+BEM+DPZ</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="css/bem-slides.css">
-	<style type="text/css">
-		body {
-			font: normal 1.5em/1.5 Inconsolata, monospace;
-			background: #fff;
-			color: #000;
-		}
-		.full {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		overflow: hidden;
-		margin: -320px 0 0 -512px;
-		width: 1024px;
-		height: 640px;
-		}
-		.slide {
-		    position: relative;
-		    width: 1024px;
-		    height: 640px;
-		}
-		.slide>div {
-		    position: absolute;
-		    top: 0;
-		    left: 0;
-		    overflow: hidden;
-		    padding: 3em 3em 0;
-		    width: 784px;
-		    height: 535px
-		}
-		.full .slide {
-		position: absolute;
-		top: 0;
-		left: 0;
-		margin-left: 150%;
-		}
-		.full .slide:target {
-		margin: 0;
-		}
-		.full .slide .next {
-		    visibility: hidden
-		}
-		.full .slide .next.active {
-		    visibility: visible
-		}
-		.slide.cover, .slide.shout {
-		    z-index: 1
-		}
-		.slide.cover:after, .slide.shout:after {
-		    visibility: hidden
-		}
-		.slide.cover img {
-			position: absolute;
-			top: 0;
-			left: 0;
-			z-index: -1;
-		}
-		.strike {
-			text-decoration: line-through;
-		}
-		.live-region {
-		    display: none
-		}
-		img {
-			max-width: 100%;
-		}
-	</style>
+	<link rel="stylesheet" href="bower_components/shower-lo-fi/css/screen.css" />
+	<link rel="stylesheet" href="css/bem-slides.css" />
 </head>
 <body class="list">
 	<section class="slide slide--karate-explosion"><div>
@@ -85,9 +20,9 @@
 	<section class="slide"><div>
 		<h2>block, element, modifier</h2>
 		<ul>
-			<li class="next">.person</li>
-			<li class="next">.person__hand</li>
-			<li class="next">.person--pierre</li>
+			<li class="next"><em>block: </em>.person</li>
+			<li class="next"><em>element: </em>.person__hand</li>
+			<li class="next"><em>modifier: </em>.person--pierre</li>
 			<li class="next">.person--pierre .person__hand</li>
 			<li class="next">.person--pierre .person__hand .person__hand--left</li>
 		</ul>
@@ -96,9 +31,9 @@
 	<section class="slide"><div>
 		<h2>DPZ examples</h2>
 		<ul>
-			<li>.grid, .card, .media</li>
-			<li>.grid__cell, .card__body, .media__description</li>
-			<li>.grid--no-gutter, .card--overlay, .media--category-tile</li>
+			<li><em>block: </em>.grid, .card, .media</li>
+			<li><em>element: </em>.grid__cell, .card__body, .media__description</li>
+			<li><em>modifier: </em>.grid--no-gutter, .card--overlay, .media--category-tile</li>
 		</ul>
 	</div></section>
 
@@ -150,6 +85,7 @@
 		<h2>base, layout, modules, utilities, states</h2>
 		<ul>
 			<li><em>m.[module-name].css</em>: styles for specific components</li>
+			<li>BEM</li>
 			<li>both reusable and unique</li>
 		</ul>
 	</div></section>
@@ -203,10 +139,17 @@
 		<ul>
 			<li class="next">include a space after each comma in comma-separated property or function values.</li>
 			<li class="next">use lowercase hex values for colors, shorthand if possible, unless using rgba().</li>
-			<li class="next">quote attribute values in selectors, e.g., input[type="checkbox"]. Exceptions to this rule include urls in background and font-face declarations.</li>
+			<li class="next">quote attribute values in selectors, e.g., input[type="checkbox"]</li>
 			<li class="next">0 values should not have units unless necessary, such as with transition-duration.</li>
 			<li class="next">include leading zeroes on decimal values.</li>
 			<li class="next">avoid qualifying class names with type selectors.</li>
+		</ul>
+	</div></section>
+
+	<section class="slide"><div>
+		<ul>
+			<li class="next">no magic numbers</li>
+			<li class="next">avoid pixel values</li>
 		</ul>
 	</div></section>
 
