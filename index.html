@@ -1,0 +1,101 @@
+
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>CSS+BEM+DPZ</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/bem-slides.css">
+	<style type="text/css">
+		body {
+			font: normal 1.5em/1.5 Inconsolata, monospace;
+			background: #fff;
+			color: #000;
+		}
+		.full {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		overflow: hidden;
+		margin: -320px 0 0 -512px;
+		width: 1024px;
+		height: 640px;
+		}
+		.slide {
+		    position: relative;
+		    width: 1024px;
+		    height: 640px;
+		}
+		.slide>div {
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    overflow: hidden;
+		    padding: 3em 3em 0;
+		    width: 784px;
+		    height: 535px
+		}
+		.full .slide {
+		position: absolute;
+		top: 0;
+		left: 0;
+		margin-left: 150%;
+		}
+		.full .slide:target {
+		margin: 0;
+		}
+		.full .slide .next {
+		    visibility: hidden
+		}
+		.full .slide .next.active {
+		    visibility: visible
+		}
+		.slide.cover, .slide.shout {
+		    z-index: 1
+		}
+		.slide.cover:after, .slide.shout:after {
+		    visibility: hidden
+		}
+		.slide.cover img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: -1;
+		}
+		.live-region {
+		    display: none
+		}
+	</style>
+</head>
+<body class="list">
+	<section class="slide slide--karate-explosion"><div>
+		<h2>Karate</h2>
+		<p class="note">By Eric Sweetland</p>
+	</div></section>
+
+	<section class="slide slide--no-bem"><div>
+		<h2>Wait, BEM</h2>
+		<p class="note">By Eric Sweetland</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Block, Element, Modifier</h2>
+		<ul>
+			<li class="next">.person</li>
+			<li class="next">.person__hand</li>
+			<li class="next">.person--pierre</li>
+		</ul>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Practical example</h2>
+		<ul>
+			<li>.card</li>
+			<li>.card__header, .card__title, .card__body</li>
+			<li>.card--overlay, .card--pop, .card--locations-search</li>
+		</ul>
+	</div></section>
+	
+	<div class="progress"><div></div></div>
+	<script src="bower_components/shower-core/shower.min.js"></script>
+</body>
+</html>
